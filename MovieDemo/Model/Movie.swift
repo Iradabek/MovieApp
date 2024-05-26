@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieModel: Identifiable, Codable {
+struct MovieMel: Identifiable, Codable {
     let rank: Int
     let title, description: String
     let image, bigImage: String

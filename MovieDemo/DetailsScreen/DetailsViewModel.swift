@@ -9,10 +9,10 @@ import Foundation
 
 
 class DetailsViewModel: ObservableObject {
-    @Published var detailsList: [MovieDetailsModel]
+    @Published var movieList: [MovieModel]
     
-    init(detailsList: [MovieDetailsModel]) {
-        self.detailsList = detailsList
+    init(movieList: [MovieModel]) {
+        self.movieList = movieList
         Task {
             fetchMovieDetails()
         }
@@ -23,7 +23,7 @@ class DetailsViewModel: ObservableObject {
                     DispatchQueue.main.async {
                         switch result {
                         case .success(let data):
-                            self.detailsList = data
+                            self.movieList = data
                         case .failure(let error):
                             print(error)
                         }

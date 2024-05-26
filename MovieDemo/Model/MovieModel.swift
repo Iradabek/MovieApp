@@ -7,27 +7,30 @@
 
 import Foundation
 
-struct MovieDetailsModel: Codable, Identifiable {
+struct MovieModel: Codable, Identifiable {
     let rank: Int
     let title: String
-    let thumbnail: String
+    let thumbnail: String?
     let rating, id: String
     let year: Int
-    let image, bigImage: String
+    let image, bigImage: String?
     let description: String
-    let trailer, trailerEmbedLink: String
-    let trailerYoutubeID: String
-    let genre, director, writers: [String]
+    let trailer: String?
+    let trailerEmbedLink: String?
+    let trailerYoutubeID: String?
+    let genre: [String]
+    let director, writers: [String]?
     let imdbid: String
-    let imdbLink: String
+    let imdbLink: String?
 
     enum CodingKeys: String, CodingKey {
-        case rank, title, thumbnail, rating, id, year, image
+        case rank, title, thumbnail, rating, year, id, image
         case bigImage = "big_image"
-        case description, trailer
+        case description, trailer,imdbid
         case trailerEmbedLink = "trailer_embed_link"
         case trailerYoutubeID = "trailer_youtube_id"
-        case genre, director, writers, imdbid
+        case director, writers
+        case genre
         case imdbLink = "imdb_link"
     }
 }

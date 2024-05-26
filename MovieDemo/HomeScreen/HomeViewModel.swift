@@ -12,6 +12,7 @@ class HomeViewModel: ObservableObject {
     
     init(movieList: [MovieModel]) {
         self.movieList = movieList
+        
         Task {
             fetchMovies()
         }
@@ -30,31 +31,8 @@ class HomeViewModel: ObservableObject {
     
                 }
             }
-}
+          }
 
-//extension HomeView  {
-//    @MainActor class HomeViewModel: ObservableObject {
-//        @Published var movieList = [MovieModel]()
-//        
-//        init() {
-//            fetchMovies()
-//        }
-//        
-//        func fetchMovies() {
-//            NetworkManager.shared.fetchMovies { result in
-//                DispatchQueue.main.async {
-//                    switch result {
-//                    case .success(let data):
-//                        self.movieList = data
-//                    case .failure(let error):
-//                        print(error)
-//                    }
-//                }
-//                
-//            }
-//        }
-//    }
-//}
 
 
 

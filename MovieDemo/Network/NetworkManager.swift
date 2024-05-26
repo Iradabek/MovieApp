@@ -10,17 +10,15 @@ import Foundation
 
 class NetworkManager {
     static let shared = NetworkManager()
-    
- 
-    
+
     func fetchMovies (completion: @escaping (Result <[MovieModel], Error>) -> Void) {
         URLSession.shared.fetch(url: "https://imdb-top-100-movies.p.rapidapi.com/") { (result:Result <[MovieModel], Error>) in
             completion(result)
         }
     }
     
-    func fetchMovieDetails (completion: @escaping (Result <[MovieDetailsModel], Error>) -> Void) {
-        URLSession.shared.fetch(url: "https://imdb-top-100-movies.p.rapidapi.com/top32") { (result:Result <[MovieDetailsModel], Error>) in
+    func fetchMovieDetails (completion: @escaping (Result <[MovieModel], Error>) -> Void) {
+        URLSession.shared.fetch(url: "https://imdb-top-100-movies.p.rapidapi.com/top32") { (result:Result <[MovieModel], Error>) in
             completion(result)
         }
     }
@@ -50,8 +48,8 @@ extension URLSession {
         }
         
         let headers = [
-            "X-RapidAPI-Key": "125f88b6e6mshb912fb797775f8bp1d367cjsn1a00e707d06f",
-            "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com",
+            "X-RapidAPI-Key": "d885f4fb5dmshd5e959941c7e96dp17936bjsn5733085fae8d",
+            "X-RapidAPI-Host": "imdb-top-100-movies.p.rapidapi.com"
         ]
         
         var request = URLRequest(url: url)
@@ -74,7 +72,6 @@ extension URLSession {
             
             do {
                 let result = try JSONDecoder().decode(T.self, from: data)
-                print(data)
                 completion(.success(result))
                 
             } catch {
