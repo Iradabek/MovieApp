@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct LoginView: View {
+struct ProfileView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Somehow you will gonna see your profile information in here!")
     }
 }
 
 #Preview {
-    LoginView()
+    ProfileView()
 }
