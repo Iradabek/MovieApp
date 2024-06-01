@@ -21,7 +21,8 @@
 		FB1633092BFF629600C3076C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1633082BFF629600C3076C /* Preview Assets.xcassets */; };
 		FB1633102BFF63B500C3076C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB16330F2BFF63B500C3076C /* NetworkManager.swift */; };
 		FB17FA8B2C066A480070EA39 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB17FA8A2C066A480070EA39 /* SearchViewModel.swift */; };
-		FB17FA8D2C0678E00070EA39 /* SearchItemRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB17FA8C2C0678E00070EA39 /* SearchItemRow.swift */; };
+		FB17FA8D2C0678E00070EA39 /* MovieGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB17FA8C2C0678E00070EA39 /* MovieGridItem.swift */; };
+		FB48605B2C073D4D00037E27 /* DetailsMovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB48605A2C073D4D00037E27 /* DetailsMovieModel.swift */; };
 		FB6BACCB2C0076AF0037207C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FB6BACCA2C0076AF0037207C /* Kingfisher */; };
 		FB6BACCD2C007FAB0037207C /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6BACCC2C007FAB0037207C /* MovieModel.swift */; };
 		FB6BACD02C0080DB0037207C /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6BACCF2C0080DB0037207C /* DetailsViewModel.swift */; };
@@ -45,7 +46,8 @@
 		FB1633082BFF629600C3076C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB16330F2BFF63B500C3076C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FB17FA8A2C066A480070EA39 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		FB17FA8C2C0678E00070EA39 /* SearchItemRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchItemRow.swift; sourceTree = "<group>"; };
+		FB17FA8C2C0678E00070EA39 /* MovieGridItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieGridItem.swift; sourceTree = "<group>"; };
+		FB48605A2C073D4D00037E27 /* DetailsMovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMovieModel.swift; sourceTree = "<group>"; };
 		FB6BACCC2C007FAB0037207C /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		FB6BACCF2C0080DB0037207C /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		FB6BACD12C0080F70037207C /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
@@ -68,6 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				FB6BACCC2C007FAB0037207C /* MovieModel.swift */,
+				FB48605A2C073D4D00037E27 /* DetailsMovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -101,9 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				FB0D6CE32C0488A300143BF1 /* TabBar */,
-				FB02E1852C03D3EC0063C073 /* ProfileScreen */,
-				FB0D6CE02C04887C00143BF1 /* SearchScreen */,
 				FB1633152BFF683500C3076C /* HomeScreen */,
+				FB0D6CE02C04887C00143BF1 /* SearchScreen */,
+				FB02E1852C03D3EC0063C073 /* ProfileScreen */,
 				FB6BACCE2C0080BD0037207C /* DetailsScreen */,
 			);
 			path = Screens;
@@ -113,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				FB0D6CE62C04A41000143BF1 /* HomeViewItemRow.swift */,
-				FB17FA8C2C0678E00070EA39 /* SearchItemRow.swift */,
+				FB17FA8C2C0678E00070EA39 /* MovieGridItem.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -264,7 +267,8 @@
 			files = (
 				FB0D6CE22C04889300143BF1 /* SearchView.swift in Sources */,
 				FB0D6CEE2C0634BA00143BF1 /* NetworkError.swift in Sources */,
-				FB17FA8D2C0678E00070EA39 /* SearchItemRow.swift in Sources */,
+				FB17FA8D2C0678E00070EA39 /* MovieGridItem.swift in Sources */,
+				FB48605B2C073D4D00037E27 /* DetailsMovieModel.swift in Sources */,
 				FB17FA8B2C066A480070EA39 /* SearchViewModel.swift in Sources */,
 				FBB421102BFFDE4F00F9359F /* HomeViewModel.swift in Sources */,
 				FB1633102BFF63B500C3076C /* NetworkManager.swift in Sources */,

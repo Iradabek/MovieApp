@@ -8,7 +8,7 @@
 import Foundation
 
     class DetailsViewModel: ObservableObject {
-        @Published var movieList: [MovieModel] = []
+        @Published var movieList: [DetailsMovieModel] = []
         private let networkService: NetworkManager
         
         init(networkService: NetworkManager = NetworkManager.shared) {
@@ -16,11 +16,10 @@ import Foundation
         }
         
         
-        
         func fetchMovieDetails() {
             Task {
                 do {
-                    let fetchedMovieDetails:[MovieModel] = try await networkService.fetchData(from: .detailsEndpoint)
+                    let fetchedMovieDetails:[DetailsMovieModel] = try await networkService.fetchData(from: .detailsEndpoint)
                     DispatchQueue.main.async {
                         self.movieList = fetchedMovieDetails
                     }

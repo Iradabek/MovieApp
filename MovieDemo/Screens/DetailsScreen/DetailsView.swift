@@ -10,7 +10,7 @@ import Kingfisher
 
 struct DetailsView: View {
     @StateObject var viewModel: DetailsViewModel = DetailsViewModel()
-    let movie: MovieModel
+    let movie: DetailsMovieModel
     
     var body: some View {
         
@@ -21,7 +21,7 @@ struct DetailsView: View {
             
                 VStack() {
                     
-                    if let imageUrl = URL(string: movie.bigImage ?? " ") {
+                    if let imageUrl = URL(string: movie.bigImage) {
                         KFImage(imageUrl)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
@@ -57,12 +57,12 @@ struct DetailsView: View {
                             .foregroundColor(.white)
                             .padding(4)
                     
-                    Text("Directors: \(movie.director?.joined(separator: ", ") ?? "Jane Doe")")
+                    Text("Directors: \(movie.director.joined(separator: ", "))")
                             .font(.system(size: 14, weight: .regular, design: .serif))
                             .foregroundColor(.white)
                             .padding(4)
                     
-                    Text("Writers: \(movie.writers?.joined(separator: ", ") ?? "John Doe")")
+                    Text("Writers: \(movie.writers.joined(separator: ", "))")
                             .font(.system(size: 14, weight: .regular, design: .serif))
                             .foregroundColor(.white)
                             .padding(4)
@@ -86,7 +86,7 @@ struct DetailsView: View {
 
 
 #Preview {
-    DetailsView(viewModel: .init(), movie: MovieModel(
+    DetailsView(viewModel: .init(), movie: DetailsMovieModel(
         rank: 1,
         title: "Sample Movie",
         thumbnail: "https://via.placeholder.com/150",
@@ -106,3 +106,10 @@ struct DetailsView: View {
         imdbLink: "https://www.imdb.com/title/tt1234567/"
     ))
 }
+
+let variable = """
+{
+
+
+}
+"""

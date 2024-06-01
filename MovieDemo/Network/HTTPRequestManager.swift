@@ -36,9 +36,20 @@ class HttpRequestManager {
         do {
             let decoder = JSONDecoder()
             return try decoder.decode(T.self, from: data)
+        
         } catch {
             print("invalidData")
             throw NetworkError.invalidData
+        }
+    }
+    
+    func performRequest<T: Decodable>(urlString: String, method: HTTPmethods, headers: [String: String]?) async throws -> T {
+        do {
+            let request = try makeRequest(urlString: urlString, method: method, headers: headers)
+            return try await performRequest(request)
+           
+        } catch {
+            throw error
         }
     }
 }

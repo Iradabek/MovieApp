@@ -9,7 +9,7 @@ import SwiftUI
 
 class SearchViewModel: ObservableObject {
     @Published var movieList: [MovieModel] = []
-      @Published var searchText: String = "" {
+    @Published var searchText: String = "" {
           didSet {
               if searchText.isEmpty {
                   DispatchQueue.main.async {

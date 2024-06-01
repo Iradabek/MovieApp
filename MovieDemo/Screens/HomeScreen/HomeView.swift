@@ -19,7 +19,7 @@ struct HomeView: View {
                 
                 List {
                     ForEach(viewModel.movieList) { item in
-                        NavigationLink(destination: DetailsView(movie: item)) {
+                        NavigationLink(destination: DetailsView(movie: DetailsMovieModel(item))) {
                             HomeViewItemRow(item: item)
                                 .padding()
                                 .cornerRadius(10)
